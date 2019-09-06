@@ -1,0 +1,34 @@
+.ticket{
+  cursor: pointer;
+  width: 250px;
+  background-color: darkgray;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin: 10px;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    justify-content: center;
+    height: 70px;
+    background-color: deepskyblue;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: left;
+    border-bottom: 2px solid gray;
+    padding: 10px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 10px;
+  }
+}

@@ -1,3 +1,14 @@
-<p>
-  tickets works!
-</p>
+<div *ngFor="let ticket of tickets" class="tickets-page">
+  <div class="tickets-page__header">
+    <div class="tickets-page__header__title">
+      Tickets
+    </div>
+    <div class="tickets-page__header__menu">
+      <input type="button" value="Logout" (click)="logout()">
+      <input type="button" value="Create Ticket" (click)="createTicket()">
+    </div>
+  </div>
+  <div class="tickets-page__content">
+    <app-ticket [ticket]="ticket"></app-ticket>
+  </div>
+</div>

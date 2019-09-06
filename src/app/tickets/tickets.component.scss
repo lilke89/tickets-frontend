@@ -1,0 +1,31 @@
+.tickets-page {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+
+    &__title {
+      text-align: center;
+      font-family: 'arial';
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+    }
+
+    &__menu {
+      display: flex;
+      height: 50px;
+      justify-content: right;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+  }
+}

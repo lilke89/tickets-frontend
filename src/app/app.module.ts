@@ -10,6 +10,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import {appRoutingProviders} from '../auth.guard';
 import {FormsModule} from '@angular/forms';
 import { TicketsComponent } from './tickets/tickets.component';
+import { TicketComponent } from './tickets/ticket/ticket.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { TicketsComponent } from './tickets/tickets.component';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    TicketsComponent
+    TicketsComponent,
+    TicketComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

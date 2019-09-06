@@ -3,26 +3,26 @@ import {AuthService} from '../common/services/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class RegisterComponent implements OnInit, OnDestroy {
   private username;
   private password;
+  private email;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-
   }
 
-  async login() {
-    await this.authService.login(this.username, this.password).toPromise();
+  async register() {
+    const result = await this.authService.register(this.username, this.password, this.email).toPromise();
+    console.log(result);
     await this.router.navigateByUrl('/tickets');
   }
 
   ngOnDestroy(): void {
   }
-
 }

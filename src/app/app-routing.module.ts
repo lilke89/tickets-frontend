@@ -4,6 +4,7 @@ import {LoginComponent} from './login/login.component';
 import {AuthPrivateGuard, AuthPublicGuard} from '../auth.guard';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {TicketsComponent} from './tickets/tickets.component';
+import {RegisterComponent} from './register/register.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,15 @@ const routes: Routes = [
     path: 'tickets',
     component: TicketsComponent,
     canActivate: [AuthPrivateGuard]
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    canActivate: [AuthPublicGuard]
+  },
+  { path: '',
+    redirectTo: '/tickets',
+    pathMatch: 'full'
   },
   { path: '**', component: NotFoundComponent }
 ];

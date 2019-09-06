@@ -1,0 +1,21 @@
+<div class="register-page">
+  <div class="register-page__header">
+    <div class="register-page__header__title">Demo Tickets</div>
+  </div>
+  <div class="register-page__content">
+    <div class="register-page__content__register-form">
+      <div class="register-page__content__register-form__input">
+        <input type="text" placeholder="Username" [(ngModel)]="username">
+      </div>
+      <div class="register-page__content__register-form__input">
+        <input type="text" placeholder="Password" [(ngModel)]="password">
+      </div>
+      <div class="register-page__content__register-form__input">
+        <input type="text" placeholder="Email" [(ngModel)]="email">
+      </div>
+      <div class="register-page__content__register-form__input">
+        <input type="button" value="Register" (click)="register()">
+      </div>
+    </div>
+  </div>
+</div>
