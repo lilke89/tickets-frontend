@@ -1,0 +1,43 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+
+    &__title {
+      display: flex;
+      justify-content: center;
+      font-family: 'arial';
+      font-size: 32px;
+      font-weight: bold;
+      color: green;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    &__login-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 400px;
+      height: 300px;
+      border: 1px solid black;
+
+      &__input {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+      }
+    }
+  }
+
+}

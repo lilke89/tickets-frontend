@@ -1,0 +1,18 @@
+<div class="login-page">
+  <div class="login-page__header">
+    <div class="login-page__header__title">Demo Tickets</div>
+  </div>
+  <div class="login-page__content">
+    <div class="login-page__content__login-form">
+      <div class="login-page__content__login-form__input">
+        <input type="text" placeholder="Username" [(ngModel)]="username">
+      </div>
+      <div class="login-page__content__login-form__input">
+        <input type="text" placeholder="Password" [(ngModel)]="password">
+      </div>
+      <div class="login-page__content__login-form__input">
+        <input type="button" value="Login" (click)="login()">
+      </div>
+    </div>
+  </div>
+</div>
