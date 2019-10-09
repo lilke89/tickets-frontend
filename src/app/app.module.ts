@@ -8,10 +8,13 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {appRoutingProviders} from '../auth.guard';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TicketsComponent } from './tickets/tickets.component';
 import { TicketComponent } from './tickets/ticket/ticket.component';
 import { RegisterComponent } from './register/register.component';
+import { NewTicketDialogComponent } from './tickets/new-ticket-dialog/new-ticket-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ModalModule} from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -21,13 +24,16 @@ import { RegisterComponent } from './register/register.component';
     NotFoundComponent,
     TicketsComponent,
     TicketComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewTicketDialogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: function  tokenGetter() {
@@ -38,11 +44,15 @@ import { RegisterComponent } from './register/register.component';
           'http://localhost:3000/auth/register'
         ]
       }
-    })
+    }),
+    ModalModule.forRoot()
   ],
   providers: [
     appRoutingProviders
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    NewTicketDialogComponent
+  ]
 })
 export class AppModule { }
